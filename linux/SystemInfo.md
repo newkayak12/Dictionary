@@ -82,3 +82,56 @@ $ cat /proc/cpuinfo | egrep 'siblings|cpu cores' | head -2
 ```
 
 ## free
+전체 메모리(사용하고 있는 메모리, 남은 메모리, 버퍼 메모리)에 대한 상태를 확인
+```dockerfile
+-b : byte 단위 표시
+-m : mb 단위 표시
+-g : gb 단위 표시
+-k : kb 단위 표시
+-l : 최고/최저 메모리 상황 구분해서 표현
+-s N : N초마다 출력
+```
+
+## df
+디스크 남은 용량(disk free) 확인
+```dockerfile
+-k : kb
+-m : mb
+-h : human(??)
+```
+
+## du
+현재 디렉토리에서 서브 디렉토리까지 사용량(disk usage) 확인
+```dockerfile
+-a : 하위 디렉토리에 포함된 파일까지 모든 파일 사용정보 용량 표시
+-s : 지정한 디렉토리 내에 존재하는 모든 파일, 서브 디렉토리의 합 
+-h : 깔끔하게
+
+```
+
+
+## hostname -I
+호스트 네임 출력
+
+## ifconfig
+== ipconfig
+```dockerfile
+[enp0s3] : 네트워크 인터페이스
+[flags] : 네트워크 카드의 상태 표시
+[mtu] : 네트워크 인터페이스의 최대 전송 단위(Maximum Transfer Unit)
+[inet] : 네트워크 인터페이스에 할당된 IP 주소
+[netmask] : 네트워크 인터페이스에 할당된 넷마스크 주소
+[broadcast] : 네트워크 인터페이스에 할당된 브로드캐스트 주소
+[inet6] : 네트워크 인터페이스에 할당된 IPv6 주소
+[prefixlen] : IP 주소에서 서브 넷 마스크로 사용될 비트 수
+[scopeid] : IPv6의 범위. LOOPBACK / LINKLOCAL / SITELOCAL / COMPATv4 / GLOBAL
+[ether] : 네트워크 인터페이스의 하드웨어 주소
+[RX packets] : 받은 패킷 정보
+[TX packets] : 보낸 패킷 정보
+[collision] : 충돌된 패킷 수
+[Interrupt] : 네트워크 인터페이스가 사용하는 인터럽트 번호
+
+```
+
+## ip a 
+ifconfig와 흡사하지만 UP&DOWN 정보, ip, mac 정보 확인 가능
