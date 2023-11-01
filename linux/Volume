@@ -1,0 +1,3 @@
+lsblk
+blkid
+mount <partition|disk> <mountPoint>
