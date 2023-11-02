@@ -1,5 +1,0 @@
-lsblk
-blkid
-mount <partition|disk> <mountPoint>
-
-https://ko.linux-console.net/?p=2712
