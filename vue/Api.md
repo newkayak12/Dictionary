@@ -25,11 +25,18 @@ const fullName = computed({
 
 ## multiple Class Bind 
 ```vue
+<template>
+   <div :class="[activeClass, errorClass]"></div>
+</template>
 
+
+<script setup>
 const activeClass = ref('active')
 const errorClass = ref('text-danger')
+</script>
 
-<div :class="[activeClass, errorClass]"></div>
+
+
 ```
 
 ## v-model
@@ -87,6 +94,7 @@ onMounted(() => {
 
 ## props 
 ```vue
+<script setup>
 // ❌ warning, props are readonly!
 defineProps({
   title: String,
@@ -95,7 +103,7 @@ defineProps({
 
 //
 
-<script setup>
+
 const props = defineProps(['foo'])
 
 console.log(props.foo)
@@ -105,7 +113,7 @@ console.log(props.foo)
 
 ### Binding Multiple Properties Using an Object
 ```vue
-
+<script setup>
 const post = {
   id: 1,
   title: 'My Journey with Vue'
@@ -113,6 +121,7 @@ const post = {
 
 
 <BlogPost v-bind="post" />
+</script>
 ```
 
 >
@@ -125,6 +134,7 @@ const post = {
 
 ### valid Props 
 ```vue
+<script setup>
 defineProps({
   // Basic type check
   //  (`null` and `undefined` values will allow any type)
@@ -168,5 +178,5 @@ defineProps({
     }
   }
 })
-
+</script>
 ```
