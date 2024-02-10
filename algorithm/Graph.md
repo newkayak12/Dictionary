@@ -30,6 +30,6 @@ Graph는 정점(Vertex)의 집합 V와 간선(Edge)의 집합 E로 구성된 비
 3. 루프
 4. 순환 그래프 - 한 vertex에서 ede를 타고 가면 다시 그 vertext로 돌아오는 그래프
 5. 신장트리(Spanning Tree)
-6. [최소 신장 트리(Minimum Spanning Tree, MST)](MinimumSpanningTree.md)
+6. [최소 신장 트리(Minimum Spanning Tree, MST)](tree/MinimumSpanningTree.md)
 7. 희소 그래프(Sparse) / 밀집 그래프(Dense) - 희소 그래프는 노드 수 > 간선의 수 / 밀집 그래프는 노드 수 < 간선 수
 8. 완전 그래프 - 그래프에 속한 모든 정점들이 상호 연결된 그래프, 총 간선의 수는 ((n - 1) * n ) / 2

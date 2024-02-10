@@ -36,4 +36,4 @@ bit 연산으로 부분 집합을 표현하는 방법을 의미한다.
 shift (>> ,<< ) 비트를 특정 값만큼 민다. 빈 값은 0으로 채운다.
 1<sub>(2)</sub><<2 = 1000<sub>(2)</sub>
 
-E. [BFS](./BFS.md), [DFS](./DFS.md)
+E. [BFS](tree/BFS.md), [DFS](tree/DFS.md)
