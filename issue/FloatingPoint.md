@@ -86,3 +86,22 @@ class IntroduceBigInteger {
 }
 
 ```
+
+
+### JsonSerializer<BigDecimal>
+
+BigDecimal to JsonValue
+```java
+
+class BigDecimalScale6WithBankersRoundingSerializer  implements JsonSerializer<BigDecimal> {
+
+    public static Integer SCALE_SIX = 6;
+    public static RoundingMode BANKERS_ROUNDING_MODE = RoundingMode.HALF_EVEN;
+    
+    @Override
+    public Object serialize( BigDecimal value, JsonGenerator gen,   SerializerProvider serializers ) {
+        return gen.writeString(value.setScale(SCALE_SIX, BANKERS_ROUNDING_MODE).toString());
+    }
+}
+
+```

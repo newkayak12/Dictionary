@@ -1,13 +1,14 @@
 # 우선 너비 탐색 (BFS - Breadth First Search)
-
-# 그래프
+![](../img/스크린샷 2024-02-12 15.42.03.png)
+## 사전 지식
+### 그래프
 각 정점들이 어떠한 연관 관계를 갖고 있는지를 나타내는 자료구조다. 
  1. 네트워크 : 각 네트워크 장비를 정점(vertex, node)로 연결을 간선(edge)로 본다면 그래프로 표현이 가능하다.
  2. 경로 찾기 : 특정 위치 간 짧은, 긴 경로를 그래프를 통해서 찾을 수 있다. 
  3. 순서 확인 : 정점을 할 일로 보며 그에 대한 연결을 통해서 순서를 지정할 수 있다. (위상 정렬)
  4. 연결성 확인 : 전자 회로 내 특정 회로가 상호 연결되어 있는지 확인하는 경우 등에 사용한다.
 
-# 비교 대상 - 트리 구조의 계층 순회
+### 비교 대상 - 트리 구조의 계층 순회
 [그래프](../Graph.md)도 [트리](Tree.md)와 비슷한 방식으로 동작하는데, 최초 시작 정점에서 가장 먼저 이어져 있는 정점을 모두 순회한 뒤, 각 순회된
 정점부터 또 시작하여 가장 먼저 이어진 정점을 순회하는 방식을 반복한다.
 
@@ -18,13 +19,70 @@
 위 그래프는 A 정점에서 시작하여 B, C를 우선 탐색하고 B,C가 인접하고 있는 정점을 순환하고 있다.
 순서는 `A -> B -> C -> D -> E -> F -> G -> H`가 된다.
 
-# BFS 사용 예시
-[다익스트라(Dijkstra) 알고리즘](Dijkstra.md)으로 최단 경로를 찾을 떄고 활용되며, Flow Network의 Maximum Flow를 찾기 위한
+## BFS
+탐색을 할 떄 너비를 우선하여 탐색하는 알고리즘이다. '맹목적인 탐색'을 할 때 사용할 수 있는 탐색 기법이다. 
+`최단 경로`를 찾아준다는 점에서 최단 길이를 보장해야할 떄 많이 사용한다.
+
+이 때 큐를 사용한다. 방문 처리가 된 노드들을 큐에 넣는다. 
+
+![](../img/스크린샷 2024-02-12 15.17.58.png)
+
+ 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 순으로 큐에 들어간다.
+
+```java
+
+class Bfs {
+    public static void main(String[] args) {
+
+        // 그래프를 2차원 배열로 표현해줍니다.
+        // 배열의 인덱스를 노드와 매칭시켜서 사용하기 위해 인덱스 0은 아무것도 저장하지 않습니다.
+        // 1번인덱스는 1번노드를 뜻하고 노드의 배열의 값은 연결된 노드들입니다.
+        int[][] graph = {{}, {2,3,8}, {1,6,8}, {1,5}, {5,7}, {3,4,7}, {2}, {4,5}, {1,2}};
+        boolean[] visited = new boolean[9];
+        
+        
+        
+    }
+    
+    static String bfs( int start, int[][] graph, boolean[] visited ) {
+        StringBuilder sb = new StringBuilder();
+        Queue<Ineter> queue = new LinkedList<Integer>(); 
+        
+        queue.offer(start);
+        visited[start] = true;
+        
+        
+        while( !queue.isEmpty() ) {
+            int nodeIndex = q.poll();
+            sb.append(nodeIndex + " -> ");
+            for(int i=0; i<graph[nodeIndex].length; i++) {
+                int temp = graph[nodeIndex][i];
+                // 방문하지 않았으면 방문처리 후 큐에 넣기
+                if(!visited[temp]) {
+                    visited[temp] = true;
+                    q.offer(temp);
+                }
+            }
+        }
+
+        // 탐색순서 리턴
+        return sb.toString() ;
+    }
+    
+    
+    
+}
+//출처: https://codingnojam.tistory.com/41 [아는 만큼 재밌는 개발 Coding Knowjam(코딩노잼):티스토리]
+```
+
+
+
+## BFS 사용 예시
+[다익스트라(Dijkstra) 알고리즘](Dijkstra.md)으로 최단 경로를 찾을 떄고 활용되며,  Network Flow의 [Maximum Flow(최대 유량)](Network.md)를 찾기 위한
 `Ford-Fulkerson 알고리즘`에도 사용된다.
 
 
-
-//https://school.programmers.co.kr/learn/courses/30/lessons/12913
+[땅따먹기 lv.2](https://school.programmers.co.kr/learn/courses/30/lessons/12913)
 <pre>
 땅따먹기 게임을 하려고 합니다. 땅따먹기 게임의 땅(land)은 총 N행 4열로 이루어져 있고,
 모든 칸에는 점수가 쓰여 있습니다.
