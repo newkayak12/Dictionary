@@ -95,6 +95,58 @@
  - 값을 기록해 놓는다는 점에서 캐싱(Cachig)이라고 한다
  - DP에만 국한된 개념이 아니다. 한 번 계산된 결과를 담아 놓기만 하고 DP가 아닌 다른 방식으로도 사용될 수 있다. (캐싱,메모이제이션)
  - 피보나치 함수를 예로 들었을 때, 이미 계산된 결과를 저장하면 아래의 색칠된 노드만 계산이 처리되어 프로그램의 작업 처리속도를 크게 향상시킬 수 있다.
+
+
+//예시
+//https://school.programmers.co.kr/learn/courses/30/lessons/12900
+```java
+class Tile2 {
+    @Nested
+    public class TestCases {
+        @Test
+        public void case0() {
+            int n = 2;
+            int result = 2;
+
+            Assertions.assertEquals(result, solution(n));
+        }
+
+        @Test
+        public void case1() {
+            int n = 3;
+            int result = 3;
+
+            Assertions.assertEquals(result, solution(n));
+        }
+
+        @Test
+        public void case2() {
+            int n = 4;
+            int result = 5;
+
+            Assertions.assertEquals(result, solution(n));
+        }
+
+        @Test
+        public void case3() {
+            int n = 5;
+            int result = 8;
+
+            Assertions.assertEquals(result, solution(n));
+        }
+    }
+
+    public int solution(int n) {
+        return this.calculation(n, 0, 0, 1);
+    }
+
+    private int calculation(int totalTile, int countNow, int p1, int p2) {
+        int div = 1_000_000_007;
+        if (countNow >= totalTile) return (p2 % div);
+        else return calculation(totalTile, countNow + 1, p2 % div, (p1 + p2) % div);
+    }
+}
+```
   
 
 
