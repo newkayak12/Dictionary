@@ -27,6 +27,28 @@ public int divsor ( int number ) {
     return count;
 }
 ```
+>
+> ex)16의 약수의 개수
+> ```java
+>  @Test
+> public void test () {
+>     int number = 16;
+>     int count = 0;
+>     for (int i = 1; i * i <= number; i++) {
+>         if( i * i == number)    count += 1;
+>         else if ( number % i == 0) count += 2;
+>     }
+> 
+>     System.out.println(count);
+> }
+> ```
+>  제곱이 목표하는 수가 되기 전까지의 약수는 모두 짝이 있다.  
+>  그래서 딱 제곰으로 목표하는 수가 되기 전까지만 찾으면,
+>  그리고 제곱으로 목표하는 수가 되는 수만 제외하면,
+>  2쌍이고 제곱으로 목표하는 수만 한 개가 된다.
+> 
+
+
 
 
 # 최대 공약수 구하기
@@ -57,7 +79,7 @@ int d = 2;
 
  public int gcd ( int a, int b ) {
      if( a % b == 0 ) return b;
-     else gcd ( b, a % b );
+     else return gcd ( b, a % b );
  }
  
  
