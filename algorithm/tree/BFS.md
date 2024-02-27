@@ -75,6 +75,67 @@ class Bfs {
 //출처: https://codingnojam.tistory.com/41 [아는 만큼 재밌는 개발 Coding Knowjam(코딩노잼):티스토리]
 ```
 
+## 동작
+재귀적으로 동작하지 않고 노드들을 차례대로 방문할 수 있는 큐를 사용한다. FIFO를 원칙으로 한다.
+
+## 목적 
+시작점에서 가까운 점을 방문하고 멀리 떨어져 있는 점을 나중에 방문하기 때문에 최단 경로를 찾을 떄 사용한다.
+
+```java
+public class Node {
+    int data;
+    Node lt;
+    Node rt;
+
+    public Node(int val) {
+        data = val;
+    }
+}
+
+public class BFS {
+    Node root;
+
+    public static void main(String[] args) {
+        BFS tree = new BFS();
+        tree.root = new Node(0);
+        tree.root.lt = new Node(1);
+        tree.root.rt = new Node(2);
+        tree.root.lt.lt = new Node(3);
+        tree.root.lt.rt = new Node(4);
+        tree.root.rt.lt = new Node(5);
+        tree.root.rt.rt = new Node(6);
+
+        tree.scan(tree.root);
+    }
+
+    public void scan(Node element) {
+        Queue<Node> queue = new LinkedList<>();
+        queue.offer(element);
+        int L = 0;
+
+
+        while (!queue.isEmpty()) {
+            int len = queue.size();
+            System.out.print(L + " : ");
+
+            for ( int i = 0; i < len; ++i) {
+                Node current = queue.poll();
+                System.out.print(current.data + " ");
+                if(Objects.nonNull(current.lt)) queue.offer(current.lt);
+                if(Objects.nonNull(current.rt)) queue.offer(current.rt);
+            }
+
+            L ++;
+            System.out.println();
+        }
+    }
+}
+/**
+ * 0 : 0 
+ * 1 : 1 2 
+ * 2 : 3 4 5 6 
+ */
+```
 
 
 ## BFS 사용 예시
