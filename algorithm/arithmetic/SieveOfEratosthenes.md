@@ -27,7 +27,7 @@ class Eratosthenes {
     public Boolean isPrime( int num ) {
         if ( num < 2 ) return Boolean.FALSE;
         
-        for ( int i = 2; i * i <= num; i ++ ) {
+        for ( int i = 2; i * i <= num; i ++ ) { // for ( int i = 2; i <= Math.sqrt(num) i++ ) 가 더 빠르다.
             if ( num % i == 0 ) return Boolean.FALSE;
         }
         
