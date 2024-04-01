@@ -1,7 +1,7 @@
 ## `cat /proc/cpuinfo`
 CPU 정보를 열람할 수 있다.
 
-```dockerfile
+```
 processor       : 0
 BogoMIPS        : 108.00
 Features        : fp asimd evtstrm crc32 cpuid
@@ -45,7 +45,7 @@ Model           : Raspberry Pi 4 Model B Rev 1.4
 
 ```
 
-```dockerfile
+```
 ex)
 
 #코어 수
@@ -63,7 +63,7 @@ $ grep 'cpu cores' /proc/cpuinfo | tail -1
 
 # Hyper Threading 여부
 $ cat /proc/cpuinfo | egrep 'siblings|cpu cores' | head -2
-> siblings       :    4
+> siblings     :    4
 > cpu cores    :    4
 
 ```
@@ -73,7 +73,7 @@ $ cat /proc/cpuinfo | egrep 'siblings|cpu cores' | head -2
 /proc/cpu를 더 간단하게 볼 수 있는 명령
 
 ## top
-```dockerfile
+```
 -n : 지정한 숫자만큼 화면 출력을 갱신한 후 수행
 -u : 지정한 사용자의 프로세스를 모니터링
 -b : 출력 결과를 파일이나 다른 프로그램으로 전달
@@ -83,7 +83,7 @@ $ cat /proc/cpuinfo | egrep 'siblings|cpu cores' | head -2
 
 ## free
 전체 메모리(사용하고 있는 메모리, 남은 메모리, 버퍼 메모리)에 대한 상태를 확인
-```dockerfile
+```
 -b : byte 단위 표시
 -m : mb 단위 표시
 -g : gb 단위 표시
@@ -94,7 +94,7 @@ $ cat /proc/cpuinfo | egrep 'siblings|cpu cores' | head -2
 
 ## df
 디스크 남은 용량(disk free) 확인
-```dockerfile
+```
 -k : kb
 -m : mb
 -h : human(??)
@@ -102,7 +102,7 @@ $ cat /proc/cpuinfo | egrep 'siblings|cpu cores' | head -2
 
 ## du
 현재 디렉토리에서 서브 디렉토리까지 사용량(disk usage) 확인
-```dockerfile
+```
 -a : 하위 디렉토리에 포함된 파일까지 모든 파일 사용정보 용량 표시
 -s : 지정한 디렉토리 내에 존재하는 모든 파일, 서브 디렉토리의 합 
 -h : 깔끔하게
@@ -115,7 +115,7 @@ $ cat /proc/cpuinfo | egrep 'siblings|cpu cores' | head -2
 
 ## ifconfig
 == ipconfig
-```dockerfile
+```
 [enp0s3] : 네트워크 인터페이스
 [flags] : 네트워크 카드의 상태 표시
 [mtu] : 네트워크 인터페이스의 최대 전송 단위(Maximum Transfer Unit)
