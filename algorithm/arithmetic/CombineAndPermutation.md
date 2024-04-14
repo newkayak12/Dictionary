@@ -50,11 +50,40 @@ Output: [
     [ 4, 1, 2 ], [ 4, 1, 3 ],[ 4, 2, 1 ], [ 4, 2, 3 ],[ 4, 3, 1 ], [ 4, 3, 2 ]
 ]
 
+
+
 ```java
+
 public class Permutation {
+    
     public static void main(String[] args) {
-        System.out.println(permutations(Arrays.asList(1,4,6,7,9), 3));
+        //@Deprecated
+//        System.out.println(permutations(Arrays.asList(1,4,6,7,9), 3));
+
+        System.out.println(permutationRecursively("114", "", 0, new boolean[3]));
     }
+
+    private Set<Long> permutationRecursively( String numbers, String prev, int depth, boolean[] visit) {
+
+
+        Set<Long> result = new HashSet<>();
+        if( numbers.length() < depth ) return result;
+
+        String[] arr = numbers.split("");
+        for( int i = 0; i < arr.length; i ++ ) {
+            if(!visit[i]) {
+                visit[i] = true;
+                result.add(Long.parseLong(prev+arr[i]));
+                result.addAll(permutationRecursively(numbers, prev+arr[i], depth + 1, visit));
+                visit[i] = false;
+            }
+        }
+
+        return result;
+    }
+    
+    
+    @Deprecated
     static List<List<Integer>> permutations( List<Integer> list, int count ) {
         List<List<Integer>> result = new ArrayList<>();
         if( count == 1 ) {
