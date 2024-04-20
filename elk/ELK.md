@@ -1,4 +1,4 @@
-# ElasticSearch
+# [ElasticSearch](https://esbook.kimjmin.net)
 - ApacheLucene 기반 Java 오픈 소스 분산 검색 엔진
 - 대규모 로그 파일 관리나 실시간 검색 서비스 등과 같은 대용량 데이터를 빠르게 처리해야 하는 경우 사용
 
