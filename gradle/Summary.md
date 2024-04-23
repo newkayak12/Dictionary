@@ -1,15 +1,17 @@
-# Gradle?
+# Gradle 기본 정리
+
+## Gradle?
 
 `Groovy`라는 도메인 언어를 사용하는 빌드 스크립트(태스크로 정의되는)로 정의된 빌드 도구이다. 추가적으로 종속성 관리를 지원한다.
 
 
-# 특징
+## 특징
 1. 유연성: Java, Kotlin, Android 등 다양한 프로그래밍 언어와 플랫폼을 지원한다.
 2. 성능 : Maven보다 효율적이며, 증분 빌드를 지원한다.
 3. 종속성 관리
 4. 빌드 라이프 사이클 관리 : 컴파일, 테스트, 배포를 위한 패키징까지 빌드 라이프사이클의 모든 단계를 지원
 
-# 구성
+## 구성
 1. 빌드: 소스컴파일, 테스트 실행, 실행 파일 빌드, 배포를 위한 바이너리 패키징 등 소프트웨어 개발의 다양한 단계를 자동화하는 작업 또는 일련의 작업,
 이는 빌드 스크립트에 정의되며, Gradle DSL로 작성되며 보통 `build.gradle`로 명명된다.
 2. 태스크: Gradle의 기본 작업 단위, 고유한 이름을 가질 수 있다.
@@ -32,7 +34,7 @@ dependencies {
 5. 레포지토리: 의존성을 다운로드할 수 있는 위치를 명명한다. `mavenCenter()`, `jcenter()`등이 있다.
 6. 프로젝트: 소프트웨어 애플리케이션 또는 구성 요소를 나타내는 엔티
 
-# 빌드 스크립트 구조
+## 빌드 스크립트 구조
 - 태스크: gradle이 실행해야하는 작업을 정의한다. 
 ```groovy
 task clean(type: Delete) {
@@ -67,7 +69,7 @@ sourceSets {
 }
 ```
 
-## 태스크
+### 태스크
 - javaCompile: 자바 소스 코드를 클래스로 컴파일한다. 소스 및 대상 호환성, 클래스 경로, 종속성 등과 같은 옵션을 지원
 ```groovy
 task compileJava(type: JavaCompile) {
@@ -129,17 +131,18 @@ task myTask {
 ```
 someTask -> doFirst -> task -> doLast -> anotherTask 순으로 실행된다.
 
-## 태스크 옵션
+### 태스크 옵션
 - `-D` : 작업 구성 또는 종료에서 액세스할 수 있는 시스템 속성을 정의
 - `-P` : 프로젝트 객체 또는 작업의 클로저에서 액세스할 수 있는 프로젝트 속성을 정의
 - `-x` : 작업을 제외한다. 
 
 
-# Gradle Properties
+## Gradle Properties
 빌드 프로세스의 다양한 측면을 구성하는 데 사용하는 Key:Value 쌍 빌드스크립트 전체에서 액세스할 수 있다. 
 
 gradle.properties
 ```groovy
 appName=my-app
 version=1.0.0
+java.home=/usr/share/java/bin
 ```

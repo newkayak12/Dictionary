@@ -1,5 +1,7 @@
 # Redis(REmote DIctionary Server)
 
+[learn_redis](https://github.com/newkayak12/Learn_Redis)
+
 ## 특징
 1. key-value 스토어 (Dictionary)
 2. 컬렉션을 지원한다.(List, Set, SortedSet Hash)
