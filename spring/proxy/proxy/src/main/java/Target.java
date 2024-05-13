@@ -1,7 +1,6 @@
-public class Target {
-
-
-    public void echo(String target) {
-        System.out.println(target);
+public class Target implements TargetInterface{
+    @Override
+    public void echo(String text) {
+        System.out.println(text);
     }
 }
