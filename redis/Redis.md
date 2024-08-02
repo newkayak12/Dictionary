@@ -2,7 +2,6 @@
 
 [learn_redis](https://github.com/newkayak12/Learn_Redis)
 [참고1](https://inpa.tistory.com/entry/REDIS-%F0%9F%93%9A-%EB%8D%B0%EC%9D%B4%ED%84%B0-%ED%83%80%EC%9E%85Collection-%EC%A2%85%EB%A5%98-%EC%A0%95%EB%A6%AC)
-[참고2](https://inpa.tistory.com/entry/REDIS-%F0%9F%93%9A-%EB%8D%B0%EC%9D%B4%ED%84%B0-%ED%83%80%EC%9E%85Collection-%EC%A2%85%EB%A5%98-%EC%A0%95%EB%A6%AC#strings_%EB%AA%85%EB%A0%B9%EC%96%B4_%EB%A6%AC%EC%8A%A4%ED%8A%B8)
 
 ## 특징
 1. key-value 스토어 (Dictionary)
@@ -55,10 +54,36 @@ setbit    key      0        1
 
 ### 3. Lists
 - value에 List를 저장
+- 추가/ 삭제/ 조회 O(1)이지만 랜덤 액세스는 O(N)속도
+- 메시지 QUEUE로 사용하기 적절
+- 양방향 큐로 생각해도 나쁘지 않을거 같다.
 
+#### 명령어
+- LPUSH : 왼쪽에 push
+- RPUSH : 오른쪽에 push
+- LPUSHX : 기존에 있을 경우 LPUSH
+- RPUSHX : 기존에 리스트가 있을경우만 RPUSH
+- LSET : 인덱스로 특정 위치 값을 바꿈 (LSET key index value)
+- LINSERT : 지정한 값 앞, 뒤에 새 값 저장 (LINSERT key BEFORE|AFTER pivot value)
+- RPOPLPUSH : RPOP + LPUSH
+- LRANGE : 인덱스 범위로 조회 (LRANGE key start end)
+- LINDEX : 인덱스로 조회 ( LINDEX index)
+- LLEN : 리스트 총 개수 조회
+- LPOP : 왼쪽에서 꺼내고 삭제
+- RPOP : 오른쪽에서 꺼내고 삭제
+- BLPOP : 리스트에 값이 없으면 지정 시간 만큼 기다려서 값이 생기면 LPOP (BLPOP key timeout)
+- BRPOP : 리스트에 값이 없으면 지정 시간 만큼 기다려서 값이 생기면 RPOP (BLPOP key timeout) 
+- BRPOPLPUSH : 리스트에 값이 없으면 지정 시간 만큼 기다려서 값이 생기면 RPOPLPUSH  (BLPOP key timeout)
+- LREM : 값을 지정해서 삭제 (LREM key count value)
+- LTRIM : 인덱스로 지정한 범위 밖의 값들을 삭제 (LTRIM key start stop)
 
 ### 4.Sets
 - value에 set을 저장. 당연히 중복 안됌 
+- 유니크한 key값
+- 정렬되지 않은 집합
+- 같은 키는 있으면 값을 덮어쓴다.
+- 집합 연산(교집합, 합집합) 등을 지원
+- 단, 모든 데이터를 요청할 수 있는 명령이 있으므로 주의 요망
 
 ### 5.Hashes
 - value에 Key:value Map을 저장
