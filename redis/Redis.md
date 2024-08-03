@@ -85,9 +85,104 @@ setbit    key      0        1
 - 집합 연산(교집합, 합집합) 등을 지원
 - 단, 모든 데이터를 요청할 수 있는 명령이 있으므로 주의 요망
 
+#### 명령어
+- SADD : 집합에 멤버 추가
+- SMOVE : 소스 집합에서 타겟 집합으로 멤버 이동
+- SMEMBERS : 집합에 모든 멤버 조회
+- SCARD : 멤버 개수를 조회
+- SRANDMEMBER : 무작위로 멤버 조회
+- SISMEMBER : 멤버 존재 여부 확인
+- SSCAN : 멤버를 일정 단위 개수 만큼 조회
+- SPOP : 무작위로 멤버를 가져옴
+- SREM : 집합에서 멤버 삭제
+- SUNION : 합집합 (SUNION key [key...])
+- SINTER : 교집합
+- SDIFF : 차집합
+- SUNIONSTORE : 합집합 후 새로운 집합에 저장
+- SINTERSTORE : 교집합 후 새로운 집합에 저장
+- SDIFFSTORE : 차집합 후 새로운 집합에 저장
+
 ### 5.Hashes
 - value에 Key:value Map을 저장
+- key 하위에 subKey로 HashTable을 제공하는 자료구조
+- 저장 한도는 메모리 한도를 따라간다.
 
+#### 명령어
+- HSET : 저장 (HSET key (field value) -> hash Key,  value)
+- HMSET : HSET 의 multi (HMSET key field value [... field value])
+- HSETNX : field가 없으면 저장( 있으면 X )
+- HGET : 조회 (key field)
+- HMGET : HGET의 Multi (HGETM key field [field...])
+- HLEN : field 개수 조회 ( HLEN key )
+- HKEYS : key에 속한 field 조회 ( HKEYS key )
+- HVALS : key에 속한 value 조회 (HVALS key)
+- HGETALL : key에 속한 모든 field, value 조회 (HGETALL key)
+- HSTRLEN : value 길이 조회 (HSTRLEN key field)
+- HSCAN : field를 일정 단위 개수만큼 조회 (HSCAN key cursor [MATCH pattern])
+- HEXISTS : field 가 있는지 확인 ( HEXISTS key field)
+- HDEL : field로 value 삭제 (HDEL key, field[...field])
+- HINCRBY : value를 increment 만큼 증가, 감소 (HINCRBY key field increment)
+- HINCRBYFLOAT  : value를 increment 만큼 증가, 감소 (HINCRBYFLOAT key field increment)
+
+### SORTED SET
+- set에 score라는 필드가 추가된 데이터 형(Score는 일종의 가중치다.)
+- 일단 insert 순서대로 들어간다. 
+- 데이터가 저장되면 score 순으로 정렬되며 저장된다.
+- sorted set은 오름차순으로 내부 정렬된다.
+- value 중복 불가! score는 중복 가능
+- score가 같으면 사전으로 정렬
+
+#### 명령어
+- ZADD : 집합에 score, member를 추가 (ZADD key score member [... score, member])
+
+- ZRANGE : index로 범위 지정해서 조회 (ZRAGNE key start stop [withscores])
+- ZRANGEBYSCORE : score로 범위를 지정해서 조회 (key min max [withscores])
+- ZRANGEBYLEX : member로 범위 지정해서 조회 (key min max [withscores])
+
+- ZREVRANGE : index로 범위를 지정해서 큰 것부터 조회 (key start stop [withscores])
+- ZREVRANGEBYSCORE : score로 범위를 지정해서 큰 것부터 조회 (key, max, min)
+- ZREVRANGEBYLEX : member로 범위를 지정해서 큰 것부터 조회 (key, max, min)
+
+- ZRANK : member로 지정해서 rank
+- ZREVRANK : member로 지정해서 rank reverse
+
+- ZSCORE : member로 score 조회
+- ZCARD : 집합에 속한 member의 개수 조회
+- 
+- ZCOUNT : score로 범위 지정해서 개수 조회
+- ZLEXCOUNT : member로 범위 지정해서 개수 조회
+
+- ZSCAN : score, member를 일정 단위 개수 만큼씩 조회 (key cursor [MATCH pattern] [COUNT count])
+
+- ZPOPMIN : 작은 값부터 꺼내온다.
+- ZPOPMAX : 큰 값부터 꺼내온다.
+
+- ZREM : 집합에서 member를 삭제
+- ZREMRANGEBYSCORE : score로 범위를 지정해서 member 삭제
+- ZREMRANGEBYRANK : index로 범위 지정해서 member 삭제
+- ZREMRANGEBYLEX : member로 지정해서 member삭제
+
+- ZINCRBY : 지정한 만큼 score 증가, 감소
+
+- ZUNIONSTORE : 합집합 구해서 새로운 집합에 저장
+- ZINTERSTORE : 교집합 구해서 새로운 집합에 저장
+
+### HyperLogLogs
+- 굉장히 많은 양의 데이터를 DUMP 할 때 사용
+- 중복되지 않은 대용량 데이터를 COUNT 할 때 사용
+- SET과 비슷하지만 저용량
+- 저장된 데이터는 다시 확인 불가 (?)
+
+#### 명령어
+- PFADD : 원소 추가 (PFADD key ele)
+- PFCOUNT : 원소 개수 조회 (PFCOUNT key[...key])
+- PFMERGE : 집합 머지 (PFMERGE destKey sourceKey [...sourceKey])
+
+### Streams
+- log를 저장하기 좋은 자료 구조
+- append-only 이며 중간에 데이터가 바뀌지 않는다.
+- 읽어 올때 id 값으로 시간 범위로 검색
+- tail -f 처럼 신규 추가 데이터 수신
 
 
 ## [캐싱 전략](../cs/CacheStrategy.md)
