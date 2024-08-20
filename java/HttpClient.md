@@ -39,3 +39,22 @@ HttpClient client = HttpClient.newBuilder()
 
 한 번 생성하면 재사용 할 수 있다.
 
+## HttpRequest
+1. The request URI
+2. The request method ( GET, PUT, POST )
+3. The request body ( if any )
+4. A timeout
+5. Request headers
+
+
+```java
+HttpRequest request = HttpRequest.newBuilder()
+      .uri(URI.create("http://openjdk.java.net/"))
+      .timeout(Duration.ofMinutes(1))
+      .header("Content-Type", "application/json")
+      .POST(BodyPublishers.ofFile(Paths.get("file.json")))
+      .build()
+```
+
+## HTTP/2
+- Java HTTP Client는 HTTP / 1.1 및 HTTP / 2를 모두 지원하고 기본값은 http/2, 서버에서 http/2를 지원하지 않으면 자동으로 http / 1.1로 전환된다.
