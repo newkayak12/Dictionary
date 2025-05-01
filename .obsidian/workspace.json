@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "41c270b6881a0286",
+        "id": "7b727f47a5c38855",
         "type": "tabs",
         "children": [
           {
-            "id": "93594ba99c07c4e6",
+            "id": "a6e01c3cafc705d4",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -150,9 +150,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "93594ba99c07c4e6",
+  "active": "0a8a501e534a07fe",
   "lastOpenFiles": [
-    "algorithm/2025/01.sort/무제 파일.md",
-    "algorithm/2025/01.sort/index.md"
+    "algorithm/2025/01.sort/index.md",
+    "algorithm/2025/01.sort/무제 파일.md"
   ]
 }
