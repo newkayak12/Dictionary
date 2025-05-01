@@ -465,6 +465,12 @@ class MergeSort {
 - 분할 정복 기반의 정렬 알고리즘
 - 배열의 pivot을 하나 선택해서 pivot보다 작은 값은 왼쪽, 큰 값은 오른쪽으로 보내서 분할
 - 이후 양쪽 구간에 대해서 재귀적으로 퀵정렬 반복
+- 퀵정렬에서 “퀵”이란 이름은 **정렬을 빠르게 수행**하는 특성에서 유래한 것입니다. 퀵정렬이 **다른 알고리즘들에 비해 빠르게 동작**하는 이유는, **피벗을 기준으로 배열을 빠르게 분할**하고, 각 분할된 부분에 대해 재귀적으로 빠르게 정렬을 처리하기 때문입니다.
+
+	- **퀵정렬의 빠른 분할**: 배열을 한 번만 순회하면서 작은 값들은 왼쪽으로, 큰 값들은 오른쪽으로 빠르게 이동시킵니다. 이때 배열을 분할하는 데 소요되는 시간은 O(n)입니다.
+    
+	- **분할 후 정렬**: 분할된 부분 배열에 대해서는 재귀적으로 퀵정렬을 적용하는데, 이 과정을 반복하여 모든 배열이 정렬됩니다.
+
 > - 정렬의 핵심
 > 	- 전체 데이터를 직접 비교하고 위치를 조정하는 것이 비효율
 > 	- 따라서 pivot을 기준으로 정렬 대상 범위를 줄인다.
@@ -478,3 +484,108 @@ class MergeSort {
 - 재귀 정렬
 	- pivot을 기준으로 나눠 왼/오른쪽 부분 배열에 대해서 퀵정렬을 재귀적으로 수행
 	- 더 이상 나눌 수 없을 때까지 반복
+
+```kotlin
+class QuickSort {  
+  
+    data class Container (  
+        val left: Int,  
+        val right: Int,  
+    ){}  
+    
+    /**  
+     * ```
+     *  [5, 4, 10, 2, 8, 6] : origin
+     *  [4, 2, 5, 6, 8, 10] : 1회전  
+     *  [2, 4, 5, 6, 8, 10] : 2회전  
+     *```  
+     */
+     
+    @Test  
+    fun sortUseStack() {  
+        val list = giveMeArray()  
+        val expected = list.sorted().toIntArray()  
+        val array = list.toIntArray()  
+        val stack = Stack<Container>()  
+        stack.push(Container(0, array.size - 1))  
+  
+        while(stack.isNotEmpty()) {  
+            val (left, right) = stack.pop();  
+            var leftPoint = left  
+            var rightPoint = right  
+            var pivotValue = array[(leftPoint + rightPoint) / 2]  
+  
+            do {  
+            //pivot을 기준으로
+            //leftPoint의 값이 작으면 skip
+            //rightPoint도 같음
+            //pivot보다 크면 해당 포인트에서 루핑을 종료
+            
+                while (pivotValue > array[leftPoint]) leftPoint += 1;  
+                while (pivotValue < array[rightPoint]) rightPoint -= 1;  
+
+			// pivot과 바뀌거나
+			// pivot보다 큰 것 <-> pivot보다 작은 것
+                if (leftPoint <= rightPoint) {  
+                    val temp = array[leftPoint]  
+                    array[leftPoint] = array[rightPoint]  
+                    array[rightPoint] = temp  
+                    leftPoint += 1  
+                    rightPoint -= 1  
+                }  
+  
+            } while (leftPoint <= rightPoint)  
+  
+            if(left < rightPoint) {  
+                stack.push(Container(left, rightPoint))  
+            }  
+            if(right > leftPoint) {  
+                stack.push(Container(leftPoint, right))  
+            }  
+  
+        }  
+  
+        assertArrayEquals(expected, array)  
+    }  
+  
+  
+    private fun quickSort(array: IntArray, left: Int, right: Int) {  
+        var leftPoint = left  
+        var rightPoint = right  
+        var pivotValue = array[(leftPoint + rightPoint) / 2]  
+  
+        do {  
+            while (pivotValue > array[leftPoint]) leftPoint += 1;  
+            while (pivotValue < array[rightPoint]) rightPoint -= 1;  
+  
+            if (leftPoint <= rightPoint) {  
+                val temp = array[leftPoint]  
+                array[leftPoint] = array[rightPoint]  
+                array[rightPoint] = temp  
+                leftPoint += 1  
+                rightPoint -= 1  
+            }  
+  
+        } while (leftPoint <= rightPoint)  
+  
+        if(left < rightPoint) {  
+            quickSort(array, left, rightPoint)  
+        }  
+        if(right > leftPoint) {  
+            quickSort(array, leftPoint, right)  
+        }  
+    }  
+  
+    @Test  
+    fun sortUseCallStack() {  
+        val list = giveMeArray()  
+        val expected = list.sorted().toIntArray()  
+        val array = list.toIntArray()  
+  
+        quickSort(array, 0, array.size - 1)  
+  
+  
+        assertArrayEquals(expected, array)  
+    }  
+}
+```
