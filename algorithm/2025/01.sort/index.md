@@ -283,4 +283,50 @@ class InsertionSort {
 | 비교 대상  |  인접한 요소  |      gap 간격만큼 떨어진 요소       |
 | 시간 복잡도 |  O(n²)   | 평균 O(n log n), gap에 따라서 변동 |
 | 개선 목표  | 느린 이동 속도 |       빠른 정렬 -> 삽입 정렬       |
+
+```kotlin
+class ShellSort {  
   
+  
+    /**  
+     * ```     
+     *  [5, 4, 10, 2, 8, 6] : origin
+     *  ✅ Gap = 3     
+     *  •  그룹1: [5, 2] → 정렬 후 [2, 4, 10, 5, 8, 6]    
+     *  •  그룹2: [4, 8] → 정렬 후 [2, 4, 10, 5, 8, 6] (이미 정렬됨)  
+     *  •  그룹3: [10, 6] → 정렬 후 [2, 4, 6, 5, 8, 10]  
+     *  → ✅ 결과 after gap=3: [2, 4, 6, 5, 8, 10]    
+     *     *  ✅ Gap = 1 (마지막 삽입 정렬 단계)  
+     *  •  삽입 정렬처럼 한 칸씩 비교하면서 정렬  
+     *  → [2, 4, 6, 5, 8, 10]  
+     *  → [2, 4, 5, 6, 8, 10]   
+     *     *  ✅ 최종 결과  
+     *  [2, 4, 5, 6, 8, 10]  
+     *  ```     
+     */
+     
+    @Test  
+    fun sort() {  
+        val list = giveMeArray()  
+        val expected = list.sorted().toIntArray()  
+        val array = list.toIntArray()  
+        var gap = array.size / 2  
+  
+        while (gap > 0) {  
+            for( i in gap until array.size) {  
+                val temp = array[i]  
+                var j = i - gap  
+                while(j >= 0 && array[j] > temp) {  
+                    array[j + gap] = array[j]  
+                    j -= gap  
+                }  
+                array[j + gap] = temp  
+            }  
+            gap /= 2  
+        }  
+  
+        assertArrayEquals(expected, array)  
+    }  
+}
+```
+
