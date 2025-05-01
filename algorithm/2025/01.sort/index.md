@@ -17,6 +17,7 @@
 - 셸 정렬 (Shell Sort)
 > - 개념: 일정 간격으로 떨어진 요소들을 삽입 정렬하여 간격을 줄여감.
 > - 특징: 삽입 정렬 개선. 시간 복잡도는 gap 전략에 따라 다름.
+> - n/2...: (평균 O(n^1.5), 최악 O(n²))
 > - 비교 기반 ✅
 
 - 병합 정렬 (Merge Sort)
@@ -101,6 +102,7 @@ class BubbleSort {
         for (i in 0 until array.size - 1) {
             for (j in 0 until array.size - 1 - i) {
                 if (array[j] > array[j + 1]) {
+                // 큰 값을 뒤로
                     val temp = array[j]
                     array[j] = array[j + 1]
                     array[j + 1] = temp
