@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "0c7b2137edb42b0b",
@@ -150,7 +149,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0a8a501e534a07fe",
+  "active": "a6e01c3cafc705d4",
   "lastOpenFiles": [
     "algorithm/2025/01.sort/index.md",
     "algorithm/2025/01.sort/무제 파일.md"
