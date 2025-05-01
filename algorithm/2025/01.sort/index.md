@@ -180,11 +180,9 @@ class SelectionSort {
             for(j in i + 1  until array.size) {
                 if(array[minimumIndex] > array[j]) {
                     minimumIndex = j
+                    // 가장 작은 것을 앞으로
                 }
             }
-
-
-
             val swap = array[i]
             array[i] = array[minimumIndex]
             array[minimumIndex] = swap
@@ -261,8 +259,10 @@ class InsertionSort {
             var j = i - 1
             while (j >= 0 && array[j] > temp) {
                 array[j + 1] = array[j]
+                // swap이 아님
                 j--
             }
+            //이 시점 j는 이미 정렬된 마지막의 인덱스 값이 된다(--)
             array[j + 1] = temp
         }
 
