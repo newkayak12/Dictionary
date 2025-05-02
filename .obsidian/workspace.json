@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "algorithm/2025/01.sort/index.md",
+                "file": "algorithm/2025/index.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "algorithm/2025/01.sort/index.md",
+                "file": "algorithm/2025/index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "algorithm/2025/01.sort/index.md",
+                "file": "algorithm/2025/index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "algorithm/2025/01.sort/index.md"
+                "file": "algorithm/2025/index.md"
               }
             }
           }
@@ -152,6 +152,7 @@
   },
   "active": "db5324154000ecde",
   "lastOpenFiles": [
+    "algorithm/2025/01.sort/index.md",
     "algorithm/2025/01.sort/heap/Heap.md",
     "Screenshot 2025-05-02 at 13.44.16.png",
     "Screenshot 2025-05-02 at 13.42.33.png",
@@ -159,7 +160,6 @@
     "Screenshot 2025-05-02 at 13.39.56.png",
     "Screenshot 2025-05-02 at 13.37.30.png",
     "Screenshot 2025-05-02 at 13.32.10.png",
-    "algorithm/2025/01.sort/index.md",
     "algorithm/2025/01.sort/heap"
   ]
 }
