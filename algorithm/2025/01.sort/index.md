@@ -622,3 +622,51 @@ class QuickSort {
 >#### **단점:**
 >- **불안정 정렬(Unstable Sort)**: 힙 정렬은 동일한 값의 상대적 순서를 보장하지 않기 때문에 불안정 정렬입니다.
 >- **상대적으로 느림**: 힙 정렬은 다른 알고리즘(예: 퀵정렬, 병합정렬)에 비해 상대적으로 구현이 복잡하고, 일부 경우에는 성능이 더 나쁠 수 있습니다.
+
+```kotlin
+class HeapSort {  
+  
+    /**  
+     * ```
+     *  [5, 4, 10, 2, 8, 6] : origin
+     *  [10, 8, 5, 2, 4, 6] : 1. MaxHeap:
+     *  [8, 6, 5, 2, 4] + [10] : 2. Swap & Heapify
+     *  [6, 4, 5, 2] + [8, 10] : 3. Swap & Heapify
+     *  [2, 4, 5, 6, 8, 10] : 4. 계속 진행 → 최종  
+     *```  
+     */
+     
+    @Test  
+    fun sort() {  
+        val list = giveMeArray()  
+        val expected = list.sorted().toIntArray()  
+        val array = list.toIntArray()  
+  
+        val size = array.size  
+        for(i in size / 2 - 1 downTo 0) {  
+            heapify(array, size, i)  
+        }  
+        for(i in size - 1 downTo 1) {  
+            array[0] = array[i].also { array[i] = array[0] }  
+            heapify(array, i, 0)  
+        }  
+  
+        assertArrayEquals(expected, array)  
+    }  
+  
+    fun heapify(array: IntArray, heapSize: Int, root: Int) {  
+        var largest = root  
+        val left = 2 * root + 1  
+        val right = 2 * root + 2  
+  
+  
+        if(left < heapSize && array[left] > array[largest]) largest = left  
+        if(right < heapSize && array[right] > array[largest]) largest = right  
+  
+        if(largest != root) {  
+            array[root] = array[largest].also { array[largest] = array[root] }  
+            heapify(array, heapSize, largest)  
+        }  
+    }  
+}
+```
