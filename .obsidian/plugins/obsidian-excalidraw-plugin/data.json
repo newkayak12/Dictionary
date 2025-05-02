@@ -44,7 +44,7 @@
   "penModeDoubleTapEraser": true,
   "penModeSingleFingerPanning": true,
   "penModeCrosshairVisible": true,
-  "renderImageInMarkdownReadingMode": false,
+  "renderImageInMarkdownReadingMode": true,
   "renderImageInHoverPreviewForMDNotes": false,
   "renderImageInMarkdownToPDF": false,
   "allowPinchZoom": false,
