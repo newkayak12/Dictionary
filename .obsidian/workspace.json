@@ -103,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "algorithm/2025/01.sort/detail/6.퀵 정렬.md",
+                "file": "algorithm/2025/01.sort/정렬.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "algorithm/2025/01.sort/detail/6.퀵 정렬.md",
+                "file": "algorithm/2025/01.sort/정렬.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -143,7 +143,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "algorithm/2025/01.sort/detail/6.퀵 정렬.md"
+                "file": "algorithm/2025/01.sort/정렬.md"
               }
             }
           }
@@ -168,10 +168,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "db5324154000ecde",
+  "active": "4bbc7362ef257d63",
   "lastOpenFiles": [
-    "algorithm/2025/01.sort/정렬.md",
     "algorithm/2025/01.sort/detail/6.퀵 정렬.md",
+    "algorithm/2025/01.sort/정렬.md",
     "algorithm/2025/01.sort/detail/5. 병합 정렬.md",
     "algorithm/2025/01.sort/detail/3. 삽입정렬.md",
     "algorithm/2025/01.sort/detail/4. 셸 정렬.md",
