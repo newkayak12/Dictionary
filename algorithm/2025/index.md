@@ -12,7 +12,6 @@
 - 선형 검색 (Linear Search)
 - 이진 검색 (Binary Search)
 - 보초법 (Sentinel Search)
-- 트라이 (Trie)
 
 3. 재귀와 분할 정복
 - 재귀 함수 (Recursive Function)
@@ -29,7 +28,6 @@
 
 5. 그리디 알고리즘 (Greedy Algorithm)
 - 활동 선택 문제 (Activity Selection Problem)
-- 다익스트라 알고리즘 (Dijkstra’s Algorithm)
 - 허프만 코딩 (Huffman Coding)
 
 6. 그래프 이론
@@ -37,8 +35,6 @@
 - 너비 우선 탐색 (Breadth-First Search, BFS)
 - 깊이 우선 탐색 (Depth-First Search, DFS)
 - 다익스트라 알고리즘 (Dijkstra’s Algorithm)
-- 벨만 포드 알고리즘 (Bellman-Ford Algorithm)
-- 플로이드-워셜 알고리즘 (Floyd-Warshall Algorithm)
 - 최소 신장 트리 (Minimum Spanning Tree)
 - 크루스칼 알고리즘 (Kruskal’s Algorithm)
 - 프림 알고리즘 (Prim’s Algorithm)
@@ -46,26 +42,19 @@
 7. 트리
 - 이진 트리 (Binary Tree)
 - 이진 검색 트리 (Binary Search Tree)
-- AVL 트리 (AVL Tree)
 - 힙 (Heap)
 - 최대 힙 (Max Heap)
 - 최소 힙 (Min Heap)
-- 세그먼트 트리 (Segment Tree)
-- Fenwick 트리 (Fenwick Tree, Binary Indexed Tree)
 
 8. 문자열 알고리즘
 - KMP 알고리즘 (Knuth-Morris-Pratt Algorithm)
-- Z 알고리즘 (Z Algorithm)
 - 라빈-카프 알고리즘 (Rabin-Karp Algorithm)
-- 트라이 (Trie)
 
 9. 수학적 알고리즘
 - 소수 판별 (Prime Number Checking)
 - 유클리드 알고리즘 (Euclidean Algorithm)
-- 확장된 유클리드 알고리즘 (Extended Euclidean Algorithm)
 - 중복 순열과 조합 계산
 - 모듈러 연산 (Modular Arithmetic)
-- 페르마의 소정리 (Fermat’s Little Theorem)
 
 10. 비트 연산
 - 비트마스크 (Bitmasking)
@@ -74,13 +63,6 @@
 
 11. 최단 경로 알고리즘
 - 다익스트라 알고리즘 (Dijkstra’s Algorithm)
-- 벨만-포드 알고리즘 (Bellman-Ford Algorithm)
-- 플로이드-워셜 알고리즘 (Floyd-Warshall Algorithm)
 
 12. 고급 자료 구조
-- 이진 힙 (Binary Heap)
-- Treap
-- 세그먼트 트리 (Segment Tree)
-- Fenwick 트리 (Fenwick Tree, Binary Indexed Tree)
-- 스위핑 알고리즘 (Sweeping Algorithm)
 - Disjoint Set Union (Union-Find)

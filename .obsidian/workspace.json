@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "algorithm/2025/03.recursiveToDivideAndConquer/재귀와 분할 정복.md",
+                "file": "algorithm/2025/index.md",
                 "mode": "source",
                 "source": false
               }
@@ -31,7 +31,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "algorithm/2025/01.sort/detail/6. 퀵 정렬.md",
+                "file": "algorithm/2025/03.recursiveToDivideAndConquer/재귀와 분할 정복.md",
                 "mode": "source",
                 "source": false
               }
@@ -168,10 +168,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ae215e45e41ddc48",
+  "active": "db5324154000ecde",
   "lastOpenFiles": [
-    "algorithm/2025/01.sort/detail/6. 퀵 정렬.md",
+    "algorithm/2025/index.md",
     "algorithm/2025/03.recursiveToDivideAndConquer/재귀와 분할 정복.md",
+    "algorithm/2025/01.sort/detail/6. 퀵 정렬.md",
+    "algorithm/2025/01.sort/detail/1. 버블 정렬.md",
     "algorithm/2025/02.search/검색.md",
     "algorithm/2025/01.sort/detail/8. 기수 정렬.md",
     "algorithm/2025/01.sort/정렬.md",
@@ -181,9 +183,7 @@
     "algorithm/2025/01.sort/detail/3. 삽입정렬.md",
     "algorithm/2025/01.sort/detail/4. 셸 정렬.md",
     "algorithm/2025/01.sort/detail/2. 선택 정렬.md",
-    "algorithm/2025/01.sort/detail/1. 버블 정렬.md",
     "algorithm/2025/01.sort/detail",
-    "algorithm/2025/index.md",
     "Screenshot 2025-05-02 at 13.44.16.png",
     "Screenshot 2025-05-02 at 13.42.33.png",
     "Screenshot 2025-05-02 at 13.41.27.png",
