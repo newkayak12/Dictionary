@@ -7,7 +7,9 @@
 ----
 ### 읽기와 쓰기는 분리해야 한다. -> CQRS
 
-## CQRS
+## CQRS(Command and Query Responsibility Segregation)
 - 읽기와 쓰기의 분리
+- CQS(Command and Query Separation) :코드 모듈 단위의 분리
+- CQRS: 읽기,쓰기의 책임을 완전히 다른 모델/레이어로 분리
 
 
