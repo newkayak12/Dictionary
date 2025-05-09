@@ -6,6 +6,7 @@
       {
         "id": "a634e0bb71d8bc62",
         "type": "tabs",
+        "dimension": 68.01310043668121,
         "children": [
           {
             "id": "ae215e45e41ddc48",
@@ -36,6 +37,7 @@
       {
         "id": "4a26809b40a43dcc",
         "type": "tabs",
+        "dimension": 31.986899563318776,
         "children": [
           {
             "id": "db5324154000ecde",
@@ -99,7 +101,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "0c7b2137edb42b0b",
@@ -182,11 +185,11 @@
   },
   "active": "ae215e45e41ddc48",
   "lastOpenFiles": [
-    "algorithm/2025/03.recursiveToDivideAndConquer/재귀와 분할 정복.md",
+    "algorithm/2025/03.recursiveToDivideAndConquer/격자 기하학/격자 기하학(lattice geometry).md",
     "architecture/cqrs/CQRS-Wanted 01.md",
+    "algorithm/2025/03.recursiveToDivideAndConquer/재귀와 분할 정복.md",
     "architecture/cqrs/CQRS_1회차.pdf",
     "architecture/cqrs",
-    "algorithm/2025/03.recursiveToDivideAndConquer/격자 기하학/격자 기하학(lattice geometry).md",
     "algorithm/2025/index.md",
     "algorithm/2025/03.recursiveToDivideAndConquer/격자 기하학",
     "algorithm/2025/01.sort/detail/6. 퀵 정렬.md",
