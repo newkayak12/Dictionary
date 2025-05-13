@@ -14,13 +14,26 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "architecture/cqrs/CQRS-Wanted 02.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "73f4280c18014a6b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "algorithm/2025/03.recursiveToDivideAndConquer/재귀와 분할 정복.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "4a26809b40a43dcc",
@@ -33,7 +46,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "algorithm/2025/03.recursiveToDivideAndConquer/격자 기하학/격자 기하학(lattice geometry).md",
+                "file": "algorithm/2025/03.recursiveToDivideAndConquer/격자 기하학/ㅣ 격자 기하학(lattice geometry).md",
                 "mode": "source",
                 "source": false
               }
@@ -89,8 +102,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "0c7b2137edb42b0b",
@@ -171,12 +183,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f1b669d8b94bc77d",
+  "active": "73f4280c18014a6b",
   "lastOpenFiles": [
+    "algorithm/2025/03.recursiveToDivideAndConquer/격자 기하학/ㅣ 격자 기하학(lattice geometry).md",
+    "algorithm/2025/03.recursiveToDivideAndConquer/재귀와 분할 정복.md",
+    "architecture/cqrs/CQRS-Wanted 02.md",
     "architecture/cqrs/CQRS_2회차.pdf",
     "architecture/cqrs/CQRS-Wanted 01.md",
-    "algorithm/2025/03.recursiveToDivideAndConquer/격자 기하학/격자 기하학(lattice geometry).md",
-    "algorithm/2025/03.recursiveToDivideAndConquer/재귀와 분할 정복.md",
     "architecture/cqrs/CQRS_1회차.pdf",
     "architecture/cqrs",
     "algorithm/2025/index.md",
