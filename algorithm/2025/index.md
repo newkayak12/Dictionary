@@ -21,6 +21,8 @@
 4. 동적 계획법 (Dynamic Programming)
 - 최적 부분 구조 (Optimal Substructure)
 - 중복 부분 문제 (Overlapping Subproblems)
+- 메모이제이션
+- 탑다운-바텀업
 - 피보나치 수열
 - 0/1 배낭 문제
 - 최장 공통 부분 수열 (Longest Common Subsequence)
@@ -46,23 +48,24 @@
 - 최대 힙 (Max Heap)
 - 최소 힙 (Min Heap)
 
-8. 문자열 알고리즘
-- KMP 알고리즘 (Knuth-Morris-Pratt Algorithm)
-- 라빈-카프 알고리즘 (Rabin-Karp Algorithm)
-
-9. 수학적 알고리즘
+8. 수학적 알고리즘
 - 소수 판별 (Prime Number Checking)
 - 유클리드 알고리즘 (Euclidean Algorithm)
-- 중복 순열과 조합 계산
-- 모듈러 연산 (Modular Arithmetic)
+- +⍺
+	- 중복 순열과 조합 계산
+	- 모듈러 연산 (Modular Arithmetic)
 
-10. 비트 연산
+9. 비트 연산
 - 비트마스크 (Bitmasking)
 - 비트 연산 기초 (AND, OR, XOR, NOT)
 - 비트 시프트 (Bit Shifting)
 
-11. 최단 경로 알고리즘
+10. 최단 경로 알고리즘
 - 다익스트라 알고리즘 (Dijkstra’s Algorithm)
 
-12. 고급 자료 구조
+11. 고급 자료 구조
 - Disjoint Set Union (Union-Find)
+
+1. 문자열 알고리즘
+- KMP 알고리즘 (Knuth-Morris-Pratt Algorithm)
+- 라빈-카프 알고리즘 (Rabin-Karp Algorithm)
