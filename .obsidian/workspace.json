@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "algorithm/2025/04.dynamicProgramming/메모이제이션.md",
+                "file": "architecture/cqrs/CQRS-Wanted 03.md",
                 "mode": "source",
                 "source": false
               }
@@ -118,7 +118,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "algorithm/2025/04.dynamicProgramming/메모이제이션.md",
+                "file": "architecture/cqrs/CQRS-Wanted 03.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -135,7 +135,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "algorithm/2025/04.dynamicProgramming/메모이제이션.md",
+                "file": "architecture/cqrs/CQRS-Wanted 03.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -158,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "algorithm/2025/04.dynamicProgramming/메모이제이션.md"
+                "file": "architecture/cqrs/CQRS-Wanted 03.md"
               }
             }
           }
@@ -185,9 +185,10 @@
   },
   "active": "73f4280c18014a6b",
   "lastOpenFiles": [
+    "algorithm/2025/04.dynamicProgramming/메모이제이션.md",
+    "architecture/cqrs/CQRS-Wanted 03.md",
     "architecture/cqrs/CQRS_3회차.pdf",
     "algorithm/2025/index.md",
-    "algorithm/2025/04.dynamicProgramming/메모이제이션.md",
     "algorithm/2025/03.recursiveToDivideAndConquer/재귀와 분할 정복.md",
     "algorithm/2025/03.recursiveToDivideAndConquer/격자 기하학/ㅣ 격자 기하학(lattice geometry).md",
     "architecture/cqrs/CQRS-Wanted 02.md",
