@@ -21,9 +21,9 @@
 4. 동적 계획법 (Dynamic Programming)
 - 메모이제이션
 - 탑다운-바텀업
-- 점화식 설계
-- 피보나치 수열
-- 0/1 배낭 문제
+	- 점화식 설계
+	- 피보나치 수열
+	- 0/1 배낭 문제
 - 최장 공통 부분 수열 (Longest Common Subsequence)
 - 최장 증가 부분 수열 (Longest Increasing Subsequence)
 
