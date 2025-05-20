@@ -13,10 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "algorithm/2025/04.dynamicProgramming/LCS(Longest Common Subsequence).md",
+                "file": "architecture/domain-driven-design/01.Introduce.md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "01.Introduce"
             }
           },
           {
@@ -28,7 +30,9 @@
                 "file": "architecture/cqrs/CQRS-Wanted 03.md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "CQRS-Wanted 03"
             }
           }
         ]
@@ -50,8 +54,11 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
-              }
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
             }
           },
           {
@@ -66,7 +73,9 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "Search"
             }
           },
           {
@@ -74,14 +83,17 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "0c7b2137edb42b0b",
@@ -97,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "algorithm/2025/04.dynamicProgramming/LCS(Longest Common Subsequence).md",
+                "file": "architecture/domain-driven-design/01.Introduce.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +117,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for 01.Introduce"
             }
           },
           {
@@ -114,10 +128,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "algorithm/2025/04.dynamicProgramming/LCS(Longest Common Subsequence).md",
+                "file": "architecture/domain-driven-design/01.Introduce.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from 01.Introduce"
             }
           },
           {
@@ -127,8 +143,12 @@
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
-                "useHierarchy": true
-              }
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
             }
           },
           {
@@ -137,8 +157,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "algorithm/2025/04.dynamicProgramming/LCS(Longest Common Subsequence).md"
-              }
+                "file": "architecture/domain-driven-design/01.Introduce.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of 01.Introduce"
             }
           }
         ],
@@ -151,12 +176,12 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:퀵 스위처 열기": false,
-      "graph:그래프 뷰 열기": false,
-      "canvas:새 캔버스 만들기": false,
-      "daily-notes:오늘의 데일리 노트 열기": false,
-      "templates:템플릿 삽입": false,
-      "command-palette:명령어 팔레트 열기": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
       "obsidian-excalidraw-plugin:New drawing": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
       "obsidian-git:Open Git source control": false
@@ -164,6 +189,7 @@
   },
   "active": "f1b669d8b94bc77d",
   "lastOpenFiles": [
+    "algorithm/2025/04.dynamicProgramming/LCS(Longest Common Subsequence).md",
     "_site/yearly/2025/01.FirstHalfRollUp.md",
     "_site/yearly/2025",
     "_site/yearly",
@@ -195,7 +221,6 @@
     "_site/sql/summaries/08.ExecutionPlan.md",
     "_site/sql/summaries/06.Index.md",
     "_site/sql/summaries/07.Optimizer.md",
-    "_site/sql/summaries/05.Isolation.md",
     "_site/sql/summaries",
     "_site/sql",
     "_site/spring/proxy/proxy/build/reports/tests/test/packages/default-package.html",
