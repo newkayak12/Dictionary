@@ -189,6 +189,7 @@
   },
   "active": "f1b669d8b94bc77d",
   "lastOpenFiles": [
+    "architecture/cqrs/CQRS_4회차.pdf",
     "algorithm/2025/04.dynamicProgramming/LCS(Longest Common Subsequence).md",
     "_site/yearly/2025/01.FirstHalfRollUp.md",
     "_site/yearly/2025",
@@ -220,7 +221,6 @@
     "_site/sql/summaries/09.OptimizingQuery.md",
     "_site/sql/summaries/08.ExecutionPlan.md",
     "_site/sql/summaries/06.Index.md",
-    "_site/sql/summaries/07.Optimizer.md",
     "_site/sql/summaries",
     "_site/sql",
     "_site/spring/proxy/proxy/build/reports/tests/test/packages/default-package.html",
