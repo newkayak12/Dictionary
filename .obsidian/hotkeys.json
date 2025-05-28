@@ -34,5 +34,14 @@
       ],
       "key": "ArrowDown"
     }
+  ],
+  "app:toggle-left-sidebar": [
+    {
+      "modifiers": [
+        "Ctrl",
+        "Mod"
+      ],
+      "key": "S"
+    }
   ]
 }
