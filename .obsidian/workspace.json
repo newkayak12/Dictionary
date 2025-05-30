@@ -4,28 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "a634e0bb71d8bc62",
+        "id": "4e22e0011d43fdeb",
         "type": "tabs",
         "children": [
           {
-            "id": "f1b669d8b94bc77d",
+            "id": "ed06cb84c3aa365d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "algorithm/2025/04.dynamicProgramming/03.LCSubsequence, LCSubstring, EditDistance.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "73f4280c18014a6b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "architecture/cqrs/CQRS-Wanted 03.md",
+                "file": "java/31.Vector, Hashtable.md",
                 "mode": "source",
                 "source": false
               }
@@ -81,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "0c7b2137edb42b0b",
@@ -97,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "algorithm/2025/04.dynamicProgramming/03.LCSubsequence, LCSubstring, EditDistance.md",
+                "file": "java/31.Vector, Hashtable.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "algorithm/2025/04.dynamicProgramming/03.LCSubsequence, LCSubstring, EditDistance.md",
+                "file": "java/31.Vector, Hashtable.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "algorithm/2025/04.dynamicProgramming/03.LCSubsequence, LCSubstring, EditDistance.md"
+                "file": "java/31.Vector, Hashtable.md"
               }
             }
           }
@@ -162,31 +151,28 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0a8a501e534a07fe",
+  "active": "ed06cb84c3aa365d",
   "lastOpenFiles": [
-    "prepare/2025-05-28.md",
+    "prepare/2025-05-30.md",
+    "prepare/2025-05-29.md",
     "prepare/Untitled.md",
+    "java/30.HttpClient.md",
+    "prepare/2025-05-28.md",
     "java/31.Vector, Hashtable.md",
-    "java/31..md",
-    "java/Untitled.md",
+    "spring/15.CGLIB.md",
+    "spring/27.AfterSpringReady.md",
+    "spring/28.DDD.md",
     "spring/36.SecurityOauth2.md",
-    "spring/31.SecurityOauth2.md",
-    "algorithm/2025/03.recursiveToDivideAndConquer/01.재귀와 분할 정복.md",
-    "algorithm/2025/04.dynamicProgramming/03.LCSubsequence, LCSubstring, EditDistance.md",
-    "algorithm/2025/04.dynamicProgramming/02.Top-down vs. Bottom-up.md",
-    "algorithm/2025/04.dynamicProgramming/01.메모이제이션.md",
-    "algorithm/2025/index.md",
-    "architecture/domain-driven-design/01.Introduce.md",
     "prepare/2025-05-27.md",
-    "prepare",
-    "TODO/Untitled.md",
-    "TODO",
-    "Untitled",
+    "algorithm/2025/04.dynamicProgramming/03.LCSubsequence, LCSubstring, EditDistance.md",
+    "algorithm/2025/04.dynamicProgramming/03.LCS(Longest Common Subsequence).md",
     "spring/document/00 Spring document 톺아보기.md",
-    "spring/document/Untitled.md",
+    "prepare",
     "spring/document",
-    "spring/Untitled",
+    "architecture/cqrs/CQRS-Wanted 03.md",
+    "architecture/domain-driven-design/01.Introduce.md",
     "architecture/cqrs/CQRS_4회차.pdf",
+    "algorithm/2025/04.dynamicProgramming/LCS(Longest Common Subsequence).md",
     "_site/yearly/2025/01.FirstHalfRollUp.md",
     "_site/yearly/2025",
     "_site/yearly",
@@ -200,6 +186,9 @@
     "_site/vocabulary/04.gRPC.md",
     "_site/vocabulary/03.ServerLess.md",
     "_site/vocabulary",
+    "_site/test",
+    "_site/swift",
+    "_site/sql/summaries",
     "_site/spring/image/jpa-hibernate-springdatajpa.png",
     "_site/spring/image/entityManager.png",
     "_site/os/img/13.Unix-3.jpg",
