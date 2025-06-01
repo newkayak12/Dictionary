@@ -26,7 +26,6 @@
 	- 0/1 배낭 문제
 - 최장 공통 부분 수열 (Longest Common Subsequence)
 - 최장 증가 부분 수열 (Longest Increasing Subsequence)
-
 - 최적 부분 구조 (Optimal Substructure)
 - 중복 부분 문제 (Overlapping Subproblems)
 
