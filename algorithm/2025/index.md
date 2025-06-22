@@ -49,7 +49,21 @@
     - 프림 알고리즘
 - 위상 정렬 (Topological Sort)
 
-7. 트리
+7. 수학적 알고리즘
+- 소수 판별 (Prime Number Checking)
+- 유클리드 알고리즘 (Euclidean Algorithm)
+- +⍺
+	- 중복 순열과 조합 계산
+	- 모듈러 연산 (Modular Arithmetic)
+
+ 
+8. 비트 연산
+- 비트마스크 (Bitmasking)
+- 비트 연산 기초 (AND, OR, XOR, NOT)
+- 비트 시프트 (Bit Shifting)
+
+
+9. 트리
 - 트리와 그래프의 차이
 - 이진 트리 / 이진 탐색 트리 (BST)
 - 전위 / 중위 / 후위 순회
@@ -58,33 +72,19 @@
     - 최대 힙
     - 최소 힙
 - 우선순위 큐와 힙의 관계
- 
-8. 비트 연산
-- 비트마스크 (Bitmasking)
-- 비트 연산 기초 (AND, OR, XOR, NOT)
-- 비트 시프트 (Bit Shifting)
 
-
-
-9. 최단 경로 알고리즘
+10. 최단 경로 알고리즘
 - 다익스트라 알고리즘 (우선순위 큐 기반)
 - 그래프에서 최단 거리 배열 관리 방법
 - 인접 리스트 + 최소 힙 구현
 
 
-10. 고급 자료 구조
+11. 고급 자료 구조
 - - 유니온 파인드 (Disjoint Set Union)
     - find / union 연산
     - 경로 압축 (Path Compression)
 - 집합을 통한 연결성 판단
 - 크루스칼 알고리즘과의 연결
-
-11. 수학적 알고리즘
-- 소수 판별 (Prime Number Checking)
-- 유클리드 알고리즘 (Euclidean Algorithm)
-- +⍺
-	- 중복 순열과 조합 계산
-	- 모듈러 연산 (Modular Arithmetic)
 
 
 12. 문자열 알고리즘
