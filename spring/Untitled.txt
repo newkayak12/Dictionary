@@ -1,0 +1,58 @@
+1단계 – Spring Core 구조의 뼈대
+•	1-1. BeanDefinition, BeanFactory, ApplicationContext의 분리와 역할 ✅
+•	1-2. ApplicationContext의 refresh() 내부 구조 흐름 ✅
+•	1-3. Spring Bean Life Cycle의 확장 포인트 구조 ✅
+•	1-4. Bean Life Cycle & ApplicationContext ✅
+•	1-5. @Configuration과 @Bean의 내부 메커니즘 ✅
+•	1-6. 빈 등록 전략과 Component 스캔의 메커니즘 ✅
+•	1-7. Spring의 트랜잭션 추상화 구조 ✅
+•	1-8. 의존성 주입(DI) 전략과 생성 타이밍
+•	1-9. Spring의 Proxy 전략 – JDK vs CGLIB
+•	1-10. Java Dynamic Proxy / CGLIB Enhancer 내부 메커니즘
+•	1-11. 빈 스코프와 프록시 처리
+•	1-12. FactoryBean과 Bean 생성 커스터마이징 전략
+•	1-13. Property 관리 및 환경 설정 구조
+
+⸻
+2단계 – Spring 원리 완성 심화편
+•	2-1. Java Bean 규약 및 JavaConfig의 등장 배경
+•	2-2. Spring의 SPI 구조와 확장 포인트
+•	2-3. ThreadLocal과 컨텍스트 관리
+•	2-4. 선언형 vs 함수형 프로그래밍 모델.
+
+⸻
+
+3단계 – Core 기능의 확장 (AOP, 예외, Validation 등)
+•	3-1. AOP의 실제 구조
+•	3-2. Spring 내부에서의 예외 처리 메커니즘
+•	3-3. Spring Bean Validation과 메시지 바인딩 구조
+
+⸻
+
+4단계 – 주요 Spring 모듈 작동 구조
+•	4-1. Spring MVC 동작 원리
+•	4-2. Spring Data JPA의 내부 동작 구조
+
+⸻
+
+5단계 – Spring Security 내부 구조 집중 학습
+•	5-1. Spring Security 전체 요청 흐름 구조
+•	5-2. 인증(Authentication) 구조
+•	5-3. 인가(Authorization) 구조
+•	5-4. 예외 처리 흐름
+•	5-5. 커스텀 확장 전략
+
+⸻
+
+6단계 – Spring Boot + 외부 연계 고급 기능
+•	6-1. Spring Retry & Resilience4j AOP 기반 구조
+•	6-2. Spring 내부 캐싱 메커니즘과 캐시 추상화
+
+⸻
+
+7단계 – 비동기/Reactive 및 마이크로서비스 대응
+•	7-1. Reactor와 Mono/Flux 내부 스케줄링 구조
+•	7-2. WebFlux와 Servlet의 구조 차이
+•	7-3. Spring Cloud 핵심 구성 요소 구조
+
+⸻
