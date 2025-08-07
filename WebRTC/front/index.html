@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WebRTC</title>
+
+
+    <!-- 웹소캣 연결에 필요한 라이브러리 선언 -->
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.5.1/sockjs.min.js"></script>-->
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>-->
+
+    <script src='./build/index.js'></script>
+</head>
+<body>
+
+<div>
+    <input type='number'  id='room-id-input'>
+    <button type='button' id='enter-room-btn' >enter</button>
+    <button type='button' id='start-stream-btn' style='display: none' > stream </button>
+</div>
+
+<video id='local-stream' autoplay playsinline controls style='display: none'/>
+<div id='remote-stream-div'></div>
+
+
+
+
+</body>
+</html>
+
