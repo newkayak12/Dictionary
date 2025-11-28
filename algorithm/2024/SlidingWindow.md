@@ -26,6 +26,146 @@
 반복
 {A, A, [A, C, C], T, G, C}
 
+
+### 슬라이딩 윈도우 핵심
+- `새 합 = 이전 합 - 왼쪽 제거 값 + 오른쪽 추가 값`
+- `windowSum += extend[i] - extend[i - len]`
+- 이전 계산을 Incremental 하게 업데이트하고 계산을 재사용한다.
+
+### 정리
+- **이전 합 재사용** ✓
+- **맨 앞 제거(-)** ✓
+- **맨 뒤 추가(+)** ✓
+- **O(1) 연산으로 윈도우 이동**
+
+- 연속 부분 수열 합의 개수
+```kotlin
+  
+class `연속 부분 수열 합의 개수` {  
+    /**  
+     * https://school.programmers.co.kr/learn/courses/30/lessons/131701?language=kotlin  
+     */  
+  
+    @Test  
+    fun solution() {  
+        val elements = intArrayOf(7, 9, 1, 1, 4)  
+        val result = 18  
+  
+        assertEquals(result, calculate(elements))  
+        assertEquals(result, useSlidingWindow(elements))  
+    }  
+  
+    fun calculate(elements: IntArray): Int {   //브루트 포스
+        var sumSet = mutableSetOf<Int>()  
+  
+        for(i in 1 .. elements.size) {  
+            for(j in elements.indices) {  
+                var sum = 0  
+                for(l in j until i + j) {  
+                    sum += elements[l % elements.size]  
+                }  
+  
+                sumSet.add(sum)  
+            }  
+        }  
+  
+        return sumSet.size  
+    }  
+  
+    private fun useSlidingWindow(elements: IntArray): Int {  
+        val n = elements.size  
+        val sums = mutableSetOf<Int>()  
+        val extends = elements + elements  
+  
+        for(len in 1 .. n) {  
+            var windowSum = extends.take(len).sum()  
+            sums.add(windowSum)  
+  
+            for(i in len until n + len) {  
+                windowSum += (extends[i] - extends[i - len])  
+                sums.add(windowSum)  
+            }  
+        }  
+  
+        return sums.size  
+    }  
+}
+```
+- 할인 행사 
+```kotlin
+  
+class `할인 행사` {  
+    //SlidingWindow  
+  
+    /**  
+     * https://school.programmers.co.kr/learn/courses/30/lessons/131127?language=kotlin 
+     */
+       
+    @Test  
+    fun solution1() {  
+        val want = arrayOf("banana", "apple", "rice", "pork", "pot")  
+        val number = intArrayOf(3, 2, 2, 2, 1)  
+        val discount = arrayOf(  
+            "chicken",  
+            "apple",  
+            "apple",  
+            "banana",  
+            "rice",  
+            "apple",  
+            "pork",  
+            "banana",  
+            "pork",  
+            "rice",  
+            "pot",  
+            "banana",  
+            "apple",  
+            "banana"  
+        )  
+        val expected = 3  
+  
+        assertEquals(expected, calculate(want, number, discount))  
+    }  
+  
+  
+    @Test  
+    fun solution2() {  
+        val want = arrayOf("apple")  
+        val number = intArrayOf(10)  
+        val discount =  
+            arrayOf("banana", "banana", "banana", "banana", "banana", "banana", "banana", "banana", "banana", "banana")  
+        val expected = 0  
+  
+        assertEquals(expected, calculate(want, number, discount))  
+    }  
+  
+    private fun calculate(want: Array<String>, number: IntArray, discount: Array<String>): Int {  
+        val length = 10  
+        val wantMap = want.withIndex().associate { it.value to number[it.index] }  
+        val discountMap = discount.take(length).groupBy { it }.mapValues { it.value.size }.toMutableMap()  
+        val valid = wantMap.all { (key, count) -> (discountMap[key]?:0) >= count }  
+        var count = if (valid) 1 else 0  
+  
+        for (i in 0 until discount.size - length) {  
+  
+            val minus = discount[i]  
+            val plus = discount[i + length]  
+  
+  
+            discountMap[minus] = (discountMap[minus]?:0)+1  
+            discountMap[plus] = (discountMap[plus]?:0)+1  
+  
+            val valid = wantMap.all { (key, count) -> (discountMap[key]?:0) >= count }  
+  
+            count += if (valid) 1 else 0  
+        }  
+  
+  
+        return count  
+    }  
+}
+```
+---
+
 ## 투 포인터 예시
 
 
