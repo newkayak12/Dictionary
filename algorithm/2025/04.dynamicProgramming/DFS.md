@@ -75,6 +75,41 @@ class Permutation {
     }  
 }
 ```
+```kotlin
+public int[] solutionWithRecursive1(int n, long k) {  
+    List<int[]> result = new ArrayList<>();  
+  
+    int[] array = new int[n];  
+    for (int i = 0; i < n; i++) {  
+        array[i] = i + 1;  
+    }  
+  
+    useRecursion1(0, n, array, result);  
+    return result.get((int) k);  
+}  
+  
+void useRecursion1(int position, int n, int[] array, List<int[]> list) {  
+    if (position >= n) {  
+        list.add(array.clone());  
+        return;  
+    }  
+  
+    for (int i = position; i < n; i++) {  
+        swap(array, i, position);  
+        useRecursion1(position + 1, n, array, list);  
+        swap(array, position, i);  
+    }  
+  
+}  
+  
+void swap(int[] array, int i, int j) {  
+    int temp = array[i];  
+    array[i] = array[j];  
+    array[j] = temp;  
+}
+```
+
+
 
 ## 2. 조합 (Combination)
 
